@@ -48,6 +48,7 @@
 }
 
 .menu-link{
+   
     gap: 60px; /*-Espacios entre los elementos hijos*/
     justify-content: space-between;
     list-style-type: none;
@@ -102,7 +103,7 @@
     font-size: 20px;
     display: flex;
     font-family: Nunito;
-    font-size: clamp(12px,4vw,20px);
+    font-size: clamp(12px,8vw,20px);
     width: 430px;
     text-align: center;
 }
@@ -110,14 +111,14 @@
 .prod-caract{
     color: white;
     line-height: 1;
-   font-size: clamp(8px,4vw,16px);
+   font-size: clamp(10px,8vw,16px);
     font-family: Nunito;
     margin: 25px;
 }
 
 .prod-price {
     color: #ffba00;
-    font-size: clamp(12px,8vw,30px); 
+    font-size: clamp(28px,8vw,30px); 
     text-align: center;
     font-family: Allura;
 }
@@ -210,6 +211,28 @@
     .menu{
         justify-content: center;
     }
+    .menu-link{
+        gap: 30px
+    }
+}
+@media (max-width: 500px) {
+    .prod-present{
+               flex-direction: column;
+               width:200px;
+               margin-bottom: 10px;
+
+    }
+    .prod-img{
+    border: 1px solid white;
+    /* border-radius: 0px 0px 12px 0px; Idea descartada*/
+    width: 200px;
+    height: 200px;
+}
+.prod-caract{
+   
+    padding: 5px;
+}
+
 }
 
 
