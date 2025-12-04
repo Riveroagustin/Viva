@@ -83,7 +83,6 @@ function buscaUsuario(email) {
 function mostrarError(err) {
   const errElement = document.getElementById("id_err");
   errElement.textContent = err;
-  console.log(errElement);
   errElement.style.display = "block";
   /**Agregue un temporizador para ocultar el error */
   setTimeout(() => {
@@ -137,7 +136,6 @@ btnRegistrar.addEventListener("click", () => {
 });
 
 function registrarUsuario(email, user, pass) {
-  console.log(user);
   const usuario = buscaUsuario(email);
   if (usuario) {
     mostrarError("El email ya se encuentra registrado");
@@ -146,7 +144,6 @@ function registrarUsuario(email, user, pass) {
   const nuevoID = arrUsuarios.reduce((prev, cur) =>
     cur.id > prev.id ? cur : prev
   );
-  console.log(nuevoID.id);
   const userInput = {
     id: nuevoID.id + 1,
     email: email,
