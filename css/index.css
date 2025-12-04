@@ -9,205 +9,44 @@
 }
 
 .fondo {
+  height: 100vh;
   background: #2d572c;
-}
-
-logo-img {
-  width: 350px;
-}
-
-.contenedor {
-  border: 2px solid #2d572c;
-  background: #2d572c;
-  border-radius: 0px 0px 4px 4px;
-}
-
-.menu {
-  background: white;
-  border-radius: 0 0 16px 16px;
+  align-items: center;
+  justify-content: center;
   display: flex;
+}
+
+.contenedor-principal {
   flex-wrap: wrap; /*Por si la pantalla es chica, ajusta la cantidad de elementos que hay en un contendor RESTANDO las columnas*/
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  width: 80%;
   align-items: center;
-  justify-content: space-around; /*Espacios entre los elementos*/
-}
-
-.pie-pagina {
-  background: white;
-  border-radius: 16px 16px 0px 0px;
-  height: 100%;
-}
-
-.link {
-  text-decoration: none;
-  color: #ffba00;
-  font-size: clamp(32px, 8vw, 70px); /*Letra minima, letra maxima*/
-}
-
-.menu-link {
-  gap: 60px; /*-Espacios entre los elementos hijos*/
-  justify-content: space-between;
-  list-style-type: none;
-  display: flex;
-  font-size: 74px;
-  font-family: Allura;
-  flex: wrap;
-  font-weight: bold;
-  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-}
-
-.bienvenida {
-  color: white;
-  font-family: Nunito;
-  font-size: clamp(12px, 4vw, 20px); /*Letra minima, letra maxima*/
-  padding: 2% 5%;
-}
-
-.subtitulo {
-  color: white;
-  font-size: clamp(24px, 8vw, 62px);
-  text-align: center;
-  font-family: Allura;
-}
-
-.prod-container {
-  display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 12px;
+  height: 400px;
 }
-
-.prod-item {
-  border: 4px solid white;
-  border-radius: 8px;
-  margin-bottom: 12px;
+.columna-izquierda {
+  width: 65%;
 }
-
-.prod-present {
-  color: white;
-  font-size: 20px;
-  display: flex;
-  font-family: Nunito;
-  font-size: clamp(12px, 8vw, 20px);
-  width: 430px;
-  text-align: center;
-}
-
-.prod-caract {
-  color: white;
-  line-height: 1;
-  font-size: clamp(10px, 8vw, 16px);
-  font-family: Nunito;
-  margin: 25px;
-}
-
-.prod-price {
-  color: #ffba00;
-  font-size: clamp(28px, 8vw, 30px);
-  text-align: center;
-  font-family: Allura;
-}
-
-.prod-img {
-  border: 1px solid white;
-  /* border-radius: 0px 0px 12px 0px; Idea descartada*/
-  width: 250px;
-  height: 250px;
-}
-
-.btn-add {
-  font-size: 18px;
-  background-color: black;
-  color: #ffba00;
-  font-family: Nunito;
-  padding: 4px;
-  border-radius: 8px;
-}
-
-.btn-add:hover {
-  background-color: rgb(50, 50, 50);
-}
-
-.subtitulo-pie-pagina {
-  color: #2d572c;
-  font-size: clamp(24px, 8vw, 62px);
-  text-align: center;
-  font-family: Allura;
-}
-
-.pie-container {
+.logo-img {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
-  align-items: CENTER;
 }
 
-.pie-redes {
-  font-size: clamp(12px, 4vw, 20px);
-  text-align: center;
-  width: 250px;
-  font-family: Nunito;
+.columna-derecha {
+  width: 35%;
+  padding: 20px;
 }
 
-.pie-redes-links {
-  align-items: center;
-  color: black;
-  font-size: clamp(10px, 4vw, 15px);
-  text-align: center;
-  text-decoration: none;
-  vertical-align: 100%;
-  font-family: Nunito;
-}
-.pie-redes-link {
-  list-style-type: none;
-  align-items: center;
-}
-.pie-mapa {
-  border: 2px solid #2d572c;
-  font-size: clamp(12px, 8vw, 20px);
-  text-align: center;
-  width: 50%;
-  font-family: Nunito;
-  margin: 20px;
-}
-
-@media only screen and (max-width: 800px) {
-  .pie-container {
-    flex-direction: column;
+@media (max-width: 1100px) {
+  .columna-derecha {
+    width: 100%;
+    max-width: 400px;
   }
-  .pie-mapa {
-    width: 90%;
-    margin: 1px;
+  .contenedor-principal {
+    height: 75%;
   }
 }
-
-@media (max-width: 1200px) {
-  .menu {
-    justify-content: center;
-  }
-  .menu-link {
-    gap: 30px;
-  }
-}
-@media (max-width: 500px) {
-  .prod-present {
-    flex-direction: column;
-    width: 200px;
-    margin-bottom: 10px;
-  }
-  .prod-img {
-    border: 1px solid white;
-    /* border-radius: 0px 0px 12px 0px; Idea descartada*/
-    width: 200px;
-    height: 200px;
-  }
-  .prod-caract {
-    padding: 5px;
-  }
-}
-
 /*Formulario*/
 
 .pie-contacto {
@@ -219,27 +58,79 @@ logo-img {
 
 .formulario {
   background-color: #2d572c;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Nunito;
-  font-size: clamp(12px, 8vw, 20px);
+  font-size: clamp(14px, 4vw, 18px);
   padding: 5px;
   border-radius: 8px;
-  width: 250px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 100%;
   margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.btn-loggear {
+  font-size: 18px;
+  background-color: black;
+  color: #ffba00;
+  font-family: Nunito;
+  padding: 4px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.pie-pagina {
+  background: #2d572c;
+  border-radius: 16px 16px 0px 0px;
+  height: 100%;
+}
+
+.subtitulo {
+  color: #ffba00;
+  font-size: clamp(52px, 8vw, 60px);
+  text-align: center;
+  font-family: Allura;
+  font-weight: bold;
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  line-height: 0.8;
+}
+.contenido {
+  color: black;
+  font-family: Nunito;
+  font-size: clamp(12px, 4vw, 16px); /*Letra minima, letra maxima*/
+  padding: 2% 5%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-registrar {
+  font-size: clamp(12px, 4vw, 16px);
+  background: none;
+  color: blue;
+  border: none;
+  font: Nunito;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-registrar:hover {
+  color: darkblue;
 }
 
 input[type="text"],
 [type="email"],
+[type="password"],
 textarea {
   color: black;
   border: 3px solid black;
-  font-size: 16px;
+  font-size: 18px;
   margin: 20px;
-  height: 75%;
-}
-
-.mensaje {
-  margin-bottom: 20px;
+  height: 100%;
+  width: 75%;
   font-family: Nunito;
-  padding: 0px;
 }
